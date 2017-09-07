@@ -1,0 +1,73 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>添加/编辑缺陷流程</h3>
+</div>
+<div class="modal-body modalBody">
+    <ul class="titleUl">
+        <li>
+            <h1 style="width: auto">流程名称：</h1>
+            <input type="text" class="inputText">
+            <span class="error">不能为空</span>
+            <div class="clear"></div>
+        </li>
+         <div class="clear"></div>
+        <li class="floatleft">
+        	<h1 style="width: auto">选择角色组：</h1>
+        	<select class="selectNormal" style="width:120px;">
+			    <option>/</option>
+			    <option>;</option>
+			    <option>\</option>
+			</select>
+        </li>
+        <div class="clear"></div>
+        <li>
+            <input type="button" class="fbtn_blue" name="" value="添加">
+        </li>
+        <div class="tableListBox">
+            <div class="listBody" style="padding: 0px;height:314px;">
+                <table class="table-fullborder">
+                    <tr>
+                        <th>起始状态</th>
+                        <th>角色</th>
+                        <th>目标状态</th>
+                        <th>默认开始</th>
+                    </tr>
+                    <tr>
+                        <td>
+                        	<select class="selectNormal">
+                        		<option>新建</option>
+                        		<option>新建2</option>
+                        	</select>
+                        </td>
+                        <td>
+							<div class="dropdownBox dropdownBox1" dropdown>
+		                        <div dropdown-toggle class="tableDropdownToggle">
+		                            	<span>已选1</span>
+		                            	<img class="floatright" src="images/dropdownBox_icon.png">
+		                            	<div class="clear"></div>
+		                        </div>
+		                        <ul class="dropdown-menu tableDropdownMenu" dropdown-menu role="menu">
+		                            <li><a><input class="checkbox" ng-click="$event.stopPropagation();" type="checkbox">测试工程师测试工程师</a></li>
+		                            <li><a><input class="checkbox" ng-click="$event.stopPropagation();" type="checkbox">项目经理</a></li>
+		                            <li><a><input class="checkbox" ng-click="$event.stopPropagation();" type="checkbox">开发工程师</a></li>
+		                        </ul>
+		                    </div>
+						</td>
+                        <td>
+                        	<select class="selectNormal">
+                        		<option>新建</option>
+                        		<option>新建2</option>
+                        	</select>
+                        </td>
+                        <td><span class="f_red">默认开始</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn_blue" ng-click="ok()">确认</button>
+    <button class="btn_gray" ng-click="cancel()">取消</button>
+</div>

@@ -1,0 +1,44 @@
+<style type="text/css">
+</style>
+<div class="projectBodyBox" ng-controller="processAdminCtrl">
+    <div class="projectBodyTitle">
+        缺陷流程定制
+        <div class="floatright">
+            <input ui-sref="adminCenter.processManager.roleManager" type="button" class="floatright btn_gray marginl_10" value="管理角色组">
+            <input ui-sref="adminCenter.processManager.processStateManager" type="button" class="floatright btn_blue marginl_10" value="管理缺陷状态">
+        </div>
+    </div>
+    <div class="projectBodyFunction">
+        <div class="floatleft" ng-controller="editDefectProcessAdminModalCtrl">
+            <input ng-click="open()" class="floatleft fbtn fbtn_blue" type="button" value="添加流程">
+        </div>
+        <div class="searchBox floatright">
+            <input class="floatleft inputSearch" type="text" placeholder="请输入流程名称" name="">
+            <img class="btnSearch" src="images/searchBox_btnSearch.png">
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="projectBodyList">
+        <table class="table-fullborder">
+            <tr>
+                <th>流程名称</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="f_blue">流程一</span>
+                </td>
+                <td ng-controller="editDefectProcessAdminModalCtrl">
+                    <a class="f_blue">查看</a>
+                    <a ng-click="open()" class="f_blue">修改流程</a>
+                    <a class="f_red">删除流程</a>
+                </td>
+            </tr>
+        </table>
+        <div class="floatright">
+            <pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm embed-responsive-item" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" max-size="maxSize" rotate="false">
+            </pagination>
+        </div>
+    </div>
+</div>

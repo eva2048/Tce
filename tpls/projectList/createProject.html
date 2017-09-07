@@ -1,0 +1,85 @@
+<div class="projectBodyBox" ng-controller="createProjectCtrl">
+    <div class="loading" style="width:100%; height: 100%; position: fixed;top: 0px;
+    bottom: 0px;left: 0px;background:url(images/op_bg.png) repeat; z-index: 1050;">    
+        <div style="text-align:center;top:50%;margin-top:-80px;position:absolute;width:100%;">
+            <img style="width:120px;" src="images/loading2.gif">  
+            <h1 style="color: #fff; font-size: 16px; text-align: center;margin-top:30px;">正在提交，请稍等...</h1>
+        </div> 
+        
+    </div>
+    <div class="projectBodyTitle">
+        新建项目
+        <input ui-sref="{{backUrlClick()}}" type="button" class="floatright btn_gray" value="返回">
+        <input type="button" class="floatright btn_blue" value="保存">
+    </div>
+    <div class="createProjectBox">
+        <ng-form name="myForm" novalidate>
+            <ul>
+                <li>
+                    <h1>项目名称<em class="f_red">*</em>：</h1>
+                    <div class="floatleft">
+                        <input class="inputText" type="text" ng-model="pName">
+                        <span class="error" ng-show="pCheck(pName)">该项为必填项</span>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <h1>开始时间：</h1>
+                    <div class="floatleft">
+                        <input type="text" class="inputText" datepicker-popup="{{format}}" ng-model="dat" is-open="popup1.opened" alt-input-formats="altInputFormats" min-date="dat0" max-date="dat1" ng-click="open1()" close-text="关闭" clear-text="清空" current-text="今天"/>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <h1>结束时间：</h1>
+                    <div class="floatleft">
+                        <input type="text" class="inputText" datepicker-popup="{{format1}}" ng-model="dat1" is-open="popup2.opened" alt-input-formats="altInputFormats1" ng-click="open2()" close-text="关闭" min-date="dat" clear-text="清空" current-text="今天"/>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <h1>缺陷流程<em class="f_red">*</em>：</h1>
+                    <div class="floatleft">
+                        <select class="selectBox">
+                            <option>默认流程</option>
+                            <option>项目1流程</option>
+                        </select>
+                        <a ng-controller="checkDefectProcessModalCtrl" href="" class="detailLink" ng-click="open()">查看流程详情</a>
+                        <div class="promptBox">
+                            <h2>温馨提示：</h2>
+                            <p>
+                                1.有缺陷提交后则缺陷流程不可修改。
+                                <br> 2.可联系管理员定制缺陷流程，此功能收费。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <h1>项目模块<em class="f_red">*</em>：</h1>
+                    <div class="floatleft">
+                        <input class="inputText" type="text" placeholder="点击回车添加项目模块" ng-keyup="addModel($event)" ng-model="modelItem">
+                        <span class="error">该项为必填项</span>
+                        <div class="modelBox" ng-repeat="model in pModel">
+                            <span class="floatleft">{{model}}<img ng-click="sModelDel(model)" src="images/createProjectBox_delete.png"></span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <h1>项目描述<em class="f_red">*</em>：</h1>
+                    <div class="floatleft">
+                        <textarea class="floatleft projectTextarea"></textarea>
+                        <span class="error">该项为必填项</span>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li class="buttonBox">
+                    <input class="floatleft btn_blue" type="button" name="" value="保存">
+                    <input ui-sref="{{backUrlClick()}}" class="floatleft btn_gray" type="button" name="" value="返回">
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </ng-form>
+    </div>
+</div>

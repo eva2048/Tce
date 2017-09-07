@@ -1,0 +1,126 @@
+<div>
+	<div ui-view="topbar" style="position: fixed;width:100%; height: 60px;z-index: 200"></div>
+	<div style="padding-top: 60px;">
+		<div class="banner">
+			<div class="content">
+				<h3>TestCenter 企业版</h3>
+				<h5>开放自定义操作权限，定制专属您的TestCenter</h5>
+			</div>
+		</div>
+		<div class="content">
+			<div class="version">
+				<ul class="title fix">
+					<li>当前账号版本</li>
+					<li >可建项目数/剩余项目数</li>
+					<li>项目成员规格</li>
+					<li>定制缺陷流程</li>
+					<li>自定义属性</li>
+				</ul>
+				<ul class="version_c fix">
+					<li>
+						<p>739428090@qq.com  <span class="f_blue">免费版</span></p>
+						<div ng-controller="upgradeModalCtrl">
+							<a ng-click="open()">升级</a>
+						</div>
+					</li>
+					<li>
+						<p>5/2</p>
+						<div ng-controller="bugProjectModalCtrl">
+							<a ng-click="open()">购买</a>
+						</div>
+						
+					</li>
+					<li>
+						<p><span class="green">0-10</span>人规格</p>
+						<div ng-controller="personSpecModalCtrl">
+							<a ng-click="open()">购买</a>
+						</div>	
+					</li>
+					<li ng-controller="deblockingModalCtrl">
+						<p><img src="images/upgrade_lock_yellow.png"/> 未解锁</p>
+						<a ng-click="open(1)">解锁</a>
+					</li>
+					<li ng-controller="deblockingModalCtrl">
+						<p><img src="images/upgrade_lock_red.png"/> 未解锁</p>
+						<a ng-click="open(2)">解锁</a>						
+					</li>
+				</ul>
+				<div class="version_b">
+					<p>版本套餐</p>
+				</div>
+				<div class="version_a">
+					<div class="free">
+						<div class="title">
+							<h4>免费版</h4>
+							<p>适用于个人或敏捷项目团队</p>
+						</div>
+						<div class="price">
+							<sup>￥</sup><span style="font-size: 72px;color: #212121;">0</span> <span>元</span>
+							<a href="">免费注册</a>
+						</div>
+						<div class="explain">
+							<ul>
+								<li>允许创建并管理5个项目</li>
+								<li>每个项目最多10个成员</li>
+								<li>配置角色权限</li>
+								<li>管理用例与缺陷关联</li>
+								<li>批量添加之前项目的成员</li>
+								<li>查看缺陷报表</li>
+							</ul>
+						</div>
+					</div>
+					<div class="enterprise">
+						<div class="title">
+							<h4>企业版</h4>
+							<p>适用于各规模团队或企业</p>
+						</div>
+						<div class="price" ng-controller="upgradeModalCtrl">
+							<sup>￥</sup><span style="font-size: 72px;color: #212121;">659</span> <span>元</span>
+							<a ng-click="open()" href="">升级</a>
+						</div>
+						<div class="explain">
+							<ul>
+								<li>允许创建并管理10个项目</li>
+								<li>每个项目最多30个成员</li>
+								<li>管理用例与缺陷关联</li>  
+								<li>批量添加之前项目的成员</li>
+								<li>查看缺陷报表</li>
+								<li>自定义项目角色</li>
+								<li>配置角色权限</li>
+								<li>定制缺陷处理流程</li>
+								<li>自定义模块属性</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="role">
+			<div class="content">
+				<h3>自主配置角色及角色权限角色管理</h3>
+				<p>项目默认具有“项目经理、开发工程师、测试工程师”三种角色，支持添加自定义角色，自由配<br />置所有角色的权限。帮助企业建立专属的协作模式。</p>
+				<img src="images/upgrade_img1.png"/>
+			</div>
+		</div>
+		<div class="defect_treatment">
+			<div class="content">
+				<h3>定制化的缺陷处理流程</h3>
+				<p>TestCenter默认一套符合CMMI国际标准的缺陷处理流程，支持定制缺陷状态、处理人角色、以<br />及相应处理流程（状态变化）。帮助企业建立专属工作流。</p>
+				<img src="images/upgrade_img2.png"/>
+			</div>
+		</div>
+		<div class="custom">
+			<div class="content">
+				<h3>自定义缺陷和用例的属性</h3>
+				<p>TestCenter支持企业针对缺陷模块、用例模块添加自定义属性，从字段类型、必填属性、选项值<br />等多方面自由定制。使工具更加贴近项目实际使用。</p>
+				<img src="images/upgrade_img3.png"/>
+			</div>
+		</div>
+		<div class="help_tips">
+			<div class="content">
+				<h3>不知道如何配置项目？</h3>
+				<p>可联系管理员为您定制专属缺陷流程<br/>邮箱：<span class="f_blue">alltesting@spasvo.com</span></p>
+			</div>
+		</div>
+	</div>
+</div>

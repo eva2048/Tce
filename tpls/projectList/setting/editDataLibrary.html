@@ -1,0 +1,45 @@
+<style type="text/css">
+</style>
+<div class="projectBodyBox" >
+	<div class="projectBodyTitle">
+		修改数据字典
+	</div>
+	<div class="projectBodyFunction">
+		<select class="projectSelect">
+			<option>所有状态</option>
+			<option>进行中</option>
+			<option>结项中</option>
+			<option>已结项</option>
+		</select>
+		<div class="showMyself floatright">
+			<input type="checkbox" name="">
+			只显示自己的项目
+		</div>
+	</div>
+	<div class="projectBodyList">
+		<table class="table-border">
+			<tr>
+				<th></th>
+				<th>项目名称</th>
+				<th>项目创建人</th>
+				<th>项目状态</th>
+				<th>开始时间</th>
+				<th>结束时间</th>
+				<th>操作</th>
+			</tr>
+			<tr ng-repeat='subject in project.subjects'>
+				<td class="typeImg"><img ng-src="{{subject.type=='众测项目'?'images/projectBodyList_tc.png':'images/projectBodyList_at.png'}}"></td>
+				<td  ng-click="fadeIn();$event.stopPropagation();"><span class="f_blue cursor_p">{{subject.name}}</span></td>
+				<td>{{subject.createPeople}}</td>
+				<td class="stateImg"><img ng-src="{{getStateUrl(subject.state)}}">{{subject.state}}</td>
+				<td>{{subject.startTime}}</td>
+				<td>{{subject.endTime}}</td>
+				<td><a>进入项目</a><a class="f_blue" ng-show="{{isAllTest(subject.type)}}">编辑</a></td>
+			</tr>
+		</table>
+		<div class="floatright" ng-controller="paginationCtrl">
+        <pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm embed-responsive-item" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" max-size="maxSize" rotate="false">
+        </pagination>
+    </div>
+	</div>
+</div>

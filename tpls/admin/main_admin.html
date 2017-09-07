@@ -1,0 +1,5 @@
+<div>
+    <div ui-view="projectNav" class="floatleft" ng-click="changeFadeIn()" style="width:280px; display: block;position: fixed; top: 60px; bottom:0px;z-index: 102;"></div>
+    <div ui-view="projectBody" class="floatleft" style="position: absolute;width:auto; top: 0px; bottom:0px; right:0px; overflow-y:auto;left: 280px; "></div>
+    <div ui-view="projectDetail" style="position: absolute;width: 1150px;top:85px; bottom:0px; background:#fff;z-index: 102;" ng-class="{true:'fadeIn',false:'fadeOut'}[isFadeIn]"></div>
+</div>

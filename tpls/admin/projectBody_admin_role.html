@@ -1,0 +1,99 @@
+<style type="text/css">
+</style>
+<div class="projectBodyBox">
+	<div class="projectBodyTitle">
+		角色管理
+		<div class="floatright">
+			<input ui-sref="adminCenter.processManager" type="button" class="floatright btn_blue" value="返回">
+		</div>
+	</div>
+	<div class="projectBodyList margint_20">
+			<div class="tableListBox floatleft" style="width:20%">
+		        <div class="listTitle">角色组
+		        	<div class="floatright" class="floatright" ng-controller="addRolegroupModalCtrl">
+		        		<img ng-click="open()" class="floatright cursor_p margint_10" src="images/projectSetPanel_5_blue.png" title="新增角色组">
+		        	</div>
+		        </div>
+		        <div class="listBody">
+		            <ul class="selectUl">
+		                <li>
+		                    	项目经理
+		                    <div class="floatright function">
+		                        <a class="f_red">删除</a>
+		                    </div>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="tableListBox floatleft" style="width:20%; margin-left:2%">
+		        <div class="listTitle">角色
+					<div class="floatright" class="floatright" ng-controller="addRoleModalCtrl">
+		        		<img ng-click="open()" class="floatright cursor_p margint_10" src="images/projectSetPanel_5_blue.png" title="新增角色">
+		        	</div>
+		        </div>
+		        <div class="listBody">
+		            <ul class="selectUl">
+		                <li>
+		                   	 项目经理
+		                    <div class="floatright function">
+		                    </div>
+		                </li>
+		                <li>
+		                   	 开发工程师
+		                    <div class="floatright function">
+		                    </div>
+		                </li>
+		                <li>
+		                   	 测试工程师
+		                    <div class="floatright function">
+		                    </div>
+		                </li>
+		                <li>
+		                   	 测试负责人
+		                    <div class="floatright function">
+		                        <a class="f_red">删除</a>
+		                    </div>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="tableListBox floatright" style="width:56%">
+		        <div class="listTitle">角色权限配置>默认角色组>测试经理
+		        </div>
+		        <div class="listBody" style="padding: 0px;">
+		            <div>
+			            <script type="text/ng-template" id="nodes_renderer.html">
+                    		<div class="tree-node tree-node-content treeLine">
+								<input class="treeNodeCheckbox" type="checkbox">
+                        		<a class="treeToggle" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)"><img ng-src="{{collapsed?'images/treeBody_close.png':'images/treeBody_open.png'}}"></a>
+								
+                        		<span ng-show="!this.isEdit" class="treeText">
+                            	{{node.title | limitTo:10}}{{node.title.length>5?'...':''}}
+                        		</span>
+                    		</div>
+                    		<ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+                        		<li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
+                        		</li>
+                    		</ol>
+                		</script>
+			            <div>
+			                <div class="col-sm-12">
+			                    <div ui-tree="treeOptions" id="tree-root">
+			                        <ol ui-tree-nodes ng-model="data">
+			                            <li ng-repeat="node in data" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+			                        </ol>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+    </div>
+    <div class="projectBodyFunction">
+        <input class="floatleft btn_blue" type="button" name="" value="保存">
+        <input class="floatleft btn_gray" type="button" name="" value="重置">
+        <div class="clear"></div>
+    </div>
+	</div>
+</div>

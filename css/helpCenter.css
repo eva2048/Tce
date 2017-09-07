@@ -1,0 +1,143 @@
+.helpCenterNav ul{
+	width: 1200px;
+	margin: 0 auto;
+	height: 60px;
+	line-height: 60px;
+}
+.helpCenterNav ul li{
+	cursor: pointer;
+	float: left;	
+	margin-right: 70px;
+}
+.helpCenterNav ul li a{
+	font-size: 14px;
+	color: #353c44;
+}
+.helpCenterNav ul li.active a{
+	color: #049aff;
+}
+.helpCenterLeft{
+	position: fixed;
+	top: 150px;
+	width:200px;
+	height: 100%;
+	float: left;
+	z-index: 200;
+}
+.helpCenterLeft ul>li{
+	background: #f6f9fa;
+	border: 1px solid #d4dbe0;
+	border-bottom: none;
+}
+.helpCenterLeft ul li a{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	color: #353c44;
+	padding:10px 15px;
+	cursor: pointer;		
+}
+.helpCenterLeft ul li a:hover{
+	color: #049aff;
+}
+.helpCenterLeft ul li.ho a{
+	color: #049aff;
+}
+.helpCenterLeft ul>li:last-child{
+	border-bottom: 1px solid #d4dbe0;
+}
+.helpCenterLeft ol{
+	border:1px solid #d4dbe0 ;
+	background: #f6f9fa;
+	border-top:none ;
+}
+.helpCenterLeft ol li{
+	box-sizing: border-box;
+	padding-left: 20px;
+	/*list-style-type: disc;*/
+	/*list-style-position: inside;*/
+}
+.helpCenterRight{
+	float: left;
+	width: 970px;
+	height: auto;
+	padding-left: 30px;
+	margin-left: 200px;
+}
+.helpCenterContent{
+	padding-bottom: 100px;
+}
+.helpCenterContent .helpTitle{
+	font-size: 14px;
+	color: #353C44;
+	padding:10px 0;
+}
+.helpTitle span{
+	color: #7a7f85;
+}
+.helpCenterContent h1{
+	font-size: 26px;
+	color: #1a1a1a;
+	padding-top:15px;
+}
+.helpCenterContent h2{
+	font-size: 20px;
+	padding-bottom: 6px;
+	color: #1a1a1a;
+	padding-top: 25px;
+}
+.helpCenterContent h3{
+	font-size: 14px;
+	color: #606874;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.helpCenterContent p{
+	font-size: 14px;
+	color: #606874;
+	line-height: 28px;
+	margin-top: 10px;
+}
+.helpCenterContent p.p2{
+	font-size: 14px;
+	color: #606874;
+	line-height: 20px;
+	margin-top: 10px;
+	text-indent: 2em;
+}
+.helpCenterContent p.p3{
+	text-indent: 2em;
+}
+.helpCenterContent img{
+	width: 100%;
+	margin: 20px 0 0;
+}
+.helpCenterContent table{
+	border: 1px solid #E5E5E5;
+	border-collapse: collapse;
+	font-size: 14px;
+	color: #606874;
+	width: 100%;
+	margin: 20px auto;
+}
+.helpCenterContent table tr{
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #E5E5E5;
+}
+.helpCenterContent table  td{
+	padding:15px 10px;
+	border: 1px solid #E5E5E5;
+}
+.helpCenterContent table th{
+	padding:5px 10px;
+	border: 1px solid #E5E5E5;
+	background: #E1EDF7;
+	text-align: center;
+	min-width: 100px;
+}
+.helpCenterContent table  td ul li{
+	list-style-type: disc;
+	list-style-position: inside;
+}

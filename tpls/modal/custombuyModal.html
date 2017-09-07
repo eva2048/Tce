@@ -1,0 +1,59 @@
+<style type="text/css">
+.modal-dialog {
+    width: 700px;
+}
+</style>
+<div class="modal-header">
+    <h3>购买企业项目</h3>
+</div>
+<div class="modal-body modalBody" style="position: relative;">
+    <ul class="titleUl">
+    	<li class="bug_num">
+    		<h1>购买项目数：</h1>
+    		<input type="button" class="button" value="-" ng-click="decrease()">
+            <span>{{num}}</span>
+            <input type="button" class="button" value="+" ng-click="increase()">    
+            <div class="clear"></div>   
+    	</li>
+    	<li class="bug_num">
+            <h1>购买成员规格：</h1>
+            <select ng-change="change(personState)" ng-model="personState" ng-init="personState='0'" class="inputText"  style="width: 148px;border-radius: 0px;border-color: #e5e5e5;">
+                <option value="0">0-10</option>
+                <option value="1">0-30</option>
+                <option value="2">0-50</option>
+                <option value="3">50+</option>
+            </select>
+        </li> 
+        <li class="bug_num">
+            <h1>购买空间大小：</h1>
+            <input type="button" class="button" value="-" ng-click="decrease()">
+            <span>{{num}}</span>
+            <input type="button" class="button" value="+" ng-click="increase()">    
+            <div class="clear"></div> 
+        </li>  
+        <li>
+            <h1>附加功能：</h1>
+            <h2>缺陷流程定制、自定义模块属性</h2>
+            <div class="clear"></div>
+        </li>
+        <li class="bug_num">
+            <h1>到期时间：</h1>
+            <h2>2017-04-05</h2> 
+            <div class="clear"></div> 
+        </li>  
+
+      <li class="zfb">
+        <h1>付款方式：</h1>
+        <img src="images/icon_zfb.png"/>
+      </li>
+
+    </ul>
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+    <div class="addpay">
+        合计：<span>1680.00 </span> 元  
+        <button class="btn_red marginl_20" ng-click="ok()">提交订单</button>
+    </div>
+</div>
+

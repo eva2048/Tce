@@ -1,0 +1,35 @@
+<div class="projectNav">
+	<div class="projectTip">
+		<span>您还能创建&nbsp;<em class="f_red">2</em>&nbsp;个项目<a class="helpicon"><img src="images/createProjectBox_detailLink.png"></a></span>
+
+	</div>
+    <div class="searchPanel">
+        <img src="images/projectNav_search.png">
+        <input class="searchBox" name="" placeholder="请输入项目名称">
+    </div>
+    <div class="projectSetPanel">
+    	<div class="projectSetBox" ng-init="count=0">
+    		<a ui-sref="index.roleManage({num:4})" title="角色管理" ng-mouseenter="count=1" ng-mouseleave="count=0" ng-click="projectNavNow=4"><img ng-src="{{count==1||projectNavNow==4?'images/projectSetPanel_1_blue.png':'images/projectSetPanel_1_gray.png'}}"></a>
+	    	<a ui-sref="index.customDefectProcess({num:5})" title="缺陷流程定制" ng-mouseenter="count=2" ng-mouseleave="count=0"  ng-click="projectNavNow=5"><img ng-src="{{count==2||projectNavNow==5?'images/projectSetPanel_2_blue.png':'images/projectSetPanel_2_gray.png'}}"></a>
+	    	<a ui-sref="index.customModelProperties({num:6})" title="自定义模块属性" ng-mouseenter="count=3" ng-mouseleave="count=0" ng-click="projectNavNow=6"><img ng-src="{{count==3||projectNavNow==6?'images/projectSetPanel_3_blue.png':'images/projectSetPanel_3_gray.png'}}"></a>
+	    	<!-- <a ui-sref="index.editDataLibrary({num:7})" title="修改数据字典" ng-mouseenter="count=4" ng-mouseleave="count=0" ng-click="projectNavNow=7"><img ng-src="{{count==4||projectNavNow==7?'images/projectSetPanel_4_blue.png':'images/projectSetPanel_4_gray.png'}}"></a> -->
+    	</div>	
+    </div>
+    <div class="clear"></div>
+    <div class="projectNavList">
+        <ul>
+            <li ui-sref="index({num:1})" class="{{projectNavNow==1?'active':''}}" ng-click="projectNavNow=1">
+                <img src="images/projectNav_total.png"> 所有项目
+                <span>{{totalNum}}</span>
+            </li>
+            <li ui-sref="index.atProject({num:2})" class="{{projectNavNow==2?'active':''}}" ng-click="projectNavNow=2">
+                <img src="images/projectNav_at.png"> 众测项目
+                <span>{{atNum}}</span>
+            </li>
+            <li ui-sref="index.tcProject({num:3})" class="{{projectNavNow==3?'active':''}}" ng-click="projectNavNow=3">
+                <img src="images/projectNav_tc.png"> TC项目
+                <span>{{tcNum}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

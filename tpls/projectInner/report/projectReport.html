@@ -1,0 +1,185 @@
+<style type="text/css">
+
+</style>
+<div class="projectBodyBox" style="overflow-y:visible" ng-controller="projectReportCtrl">
+    <div class="personalNav">
+        <h3>报表中心</h3>
+        <ul>
+            <li ng-class="{'current':isSet(1)}">
+                <a class="cursor_p" ng-click="setCurrent(1);setChart(1)">基础统计</a>
+            </li>
+            <li ng-class="{'current':isSet(2)}">
+                <a class="cursor_p" ng-click="setCurrent(2);setChart(2)">每日变化曲线</a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="chartFilter">
+        <div class="dropdownBox" dropdown ng-show="isSet(1)">
+            <div dropdown-toggle class="tableDropdownToggle">
+                系列
+                <img src="images/treeBody_border_open.png">
+            </div>
+            <ul class="dropdown-menu tableDropdownMenu" dropdown-menu role="menu">
+                <li><a>缺陷导出</a></li>
+                <li><a>高级筛选</a></li>
+                <li><a>自定义列</a></li>
+            </ul>
+        </div>
+        <div class="dropdownBox" dropdown ng-show="isSet(1)">
+            <div dropdown-toggle class="tableDropdownToggle">
+                子系列
+                <img src="images/treeBody_border_open.png">
+            </div>
+            <ul class="dropdown-menu tableDropdownMenu" dropdown-menu role="menu">
+                <li><a>缺陷导出</a></li>
+                <li><a>高级筛选</a></li>
+                <li><a>自定义列</a></li>
+            </ul>
+        </div>
+        <div class="dropdownBox" dropdown ng-show="isSet(1)">
+            <div dropdown-toggle class="tableDropdownToggle">
+                图形种类
+                <img src="images/treeBody_border_open.png">
+            </div>
+            <ul class="dropdown-menu tableDropdownMenu" dropdown-menu role="menu">
+                <li ng-click="setChart(1)"><a>直方图</a></li>
+                <li ng-click="setChart(2)"><a>折线图</a></li>
+                <li ng-click="setChart(3)"><a>饼图</a></li>
+                <li ng-click="setChart(4)"><a>表格1</a></li>
+                <li ng-click="setChart(5)"><a>表格2</a></li>
+            </ul>
+        </div>
+        <div class="dropdownBox dateBoxClear" dropdown ng-show="isSet(2)">
+            <div dropdown-toggle class="tableDropdownToggle">
+                时间范围
+                <img src="images/treeBody_border_open.png">
+            </div>
+            <ul class="dropdown-menu dropdown-menu1 tableDropdownMenu" dropdown-menu role="menu">
+                <li>
+                    <a>开始时间：
+                        <div ng-click="$event.stopPropagation();"  ng-model='timepickerTest'  ng-time class="input-group date form_datetime datetimepickerNormal" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy MM dd - HH:ii p">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li>
+                    <a>结束时间：
+                        <div ng-click="$event.stopPropagation();"  ng-model='timepickerTest1'  ng-time class="input-group date form_datetime datetimepickerNormal" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy MM dd - HH:ii p">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                        <div class="clear"></div>
+                    </a>
+                </li>
+                <li class="marginb_10">
+                    <a>
+                        <input type="button" class="btn btn-sm btn-success" value="确认">
+                        <input type="button" class="btn btn-sm btn-info" value="清空">、
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="floatright">
+            <input type="button" class="btn_blue" name="" value="生成图表">
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="reportPanelBox">
+        <div class="saveReport">
+            <a class="f_blue floatright"><img src="images/projectReport_saveimg.png">保存为图片</a>
+            <div class="clear"></div>
+        </div>
+        <highchart class="reportPanel" id="chart1" series="chart.series" title="chart.title" options="chart.options" ng-show="isChart(1)">
+        </highchart>
+        <table class="table-fullborder reportTable reportTable1" ng-show="isChart(2)">
+            <tr>
+                <th style="width: 20%">
+                    缺陷等级/流程名称
+                </th>
+                <th>
+                    新建
+                </th>
+                <th>
+                    确认
+                </th>
+                <th>
+                    分配
+                </th>
+                <th>
+                    正在修改
+                </th>
+                <th>
+                    修改完成
+                </th>
+                <th>驳回</th>
+            </tr>
+            <tr>
+                <td>
+                    0-建议
+                </td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    0-轻微
+                </td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="table-fullborder reportTable" ng-show="isChart(3)">
+            <tr>
+                <th>
+                    新建
+                </th>
+                <th>
+                    确认
+                </th>
+                <th>
+                    分配
+                </th>
+                <th>
+                    正在修改
+                </th>
+                <th>
+                    修改完成
+                </th>
+                <th>驳回</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>3</td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="clear"></div>
+        <!-- <highchart id="chart2" config="chartConfig">
+            </highchart> -->
+    </div>
+</div>

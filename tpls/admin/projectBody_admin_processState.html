@@ -1,0 +1,60 @@
+<style type="text/css">
+</style>
+<div class="projectBodyBox" ng-controller="defectStateAdminCtrl">
+	<div class="projectBodyTitle">
+		缺陷状态管理
+		<div class="floatright">
+			<input ui-sref="adminCenter.processManager" type="button" class="floatright btn_blue" value="返回">
+		</div>
+	</div>
+	<div class="projectBodyList margint_20">
+			<div class="tableListBox floatleft" style="width:400px">
+		        <div class="listTitle">状态组
+		        	<div class="floatright" class="floatright" ng-controller="addDefectStategroupModalCtrl">
+		        		<img ng-click="open()" class="floatright cursor_p margint_10" src="images/projectSetPanel_5_blue.png" title="新增状态组">
+		        	</div>
+		        </div>
+		        <div class="listBody">
+		            <ul class="selectUl">
+		                <li>
+		                    	状态组1
+		                    <div class="floatright function">
+		                        <a class="f_red">删除</a>
+		                    </div>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="tableListBox floatleft" style="width:400px; margin-left:2%">
+		        <div class="listTitle">已选状态（状态组1）
+		        	<div class="floatright" class="floatright" ng-controller="addDefectStateModalCtrl">
+		        		<img ng-click="open()" class="floatright cursor_p margint_10" src="images/projectSetPanel_5_blue.png" title="新增状态">
+		        	</div></div>
+		        <div class="listBody">
+		            <ul class="selectUl">
+		                <li>
+		                   	 新建
+		                    <div class="floatright function">
+		                    	<a class="f_red">设为默认开始</a>
+		                        <a class="f_red">删除</a>
+		                    </div>
+		                </li>
+		                <li>
+		                   	 驳回
+		                    <div class="floatright function">
+		                    	<a class="f_gray">已默认开始</a>
+		                        <a class="f_red">删除</a>
+		                    </div>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+    </div>
+    <div class="projectBodyFunction">
+        <input class="floatleft btn_blue" type="button" name="" value="保存">
+        <input class="floatleft btn_gray" type="button" name="" value="重置">
+        <div class="clear"></div>
+    </div>
+	</div>
+</div>

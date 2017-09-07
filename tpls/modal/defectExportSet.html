@@ -1,0 +1,85 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>缺陷导入配置</h3>
+</div>
+<div class="modal-body modalBody">
+    <div class="modalSetting">
+        目录分隔符：
+        <select class="selectNormal" style="width:120px;">
+            <option>/</option>
+            <option>;</option>
+            <option>\</option>
+        </select>
+        起始行：
+        <input type="text" class="inputText">
+        起始页：
+        <input type="text" class="inputText">
+        结束页：
+        <input type="text" class="inputText">
+        <input type="button" class="btn_blue" name="" value="保存模板">
+    </div>
+    <div class="tableListBox floatleft" style="width:28%">
+        <div class="listTitle">属性列表</div>
+        <div class="listBody">
+            <ul class="selectUl">
+                <li>ID</li>
+                <li>缺陷名称</li>
+                <li>缺陷等级</li>
+                <li>状态</li>
+                <li>ID</li>
+                <li>缺陷名称</li>
+                <li>缺陷等级</li>
+                <li>状态</li>
+                <li>ID</li>
+                <li>缺陷名称</li>
+                <li>缺陷等级</li>
+                <li>状态</li>
+            </ul>
+        </div>
+    </div>
+    <div class="tableListBox floatright" style="width:70%">
+        <div class="listTitle">已选属性</div>
+        <div class="listBody">
+            <ul class="selectUl">
+                <li>
+                    ID
+                    <div class="floatright function">
+                        <a class="f_blue">上移</a>
+                        <a class="f_blue">下移</a>
+                        <a class="f_red">移除</a>
+                    </div>
+                </li>
+                <li>
+                    缺陷名称
+                    <div class="floatright function">
+                        <a class="f_blue">上移</a>
+                        <a class="f_blue">下移</a>
+                        <a class="f_red">移除</a>
+                    </div>
+                </li>
+                <li>
+                    缺陷等级
+                    <div class="floatright function">
+                        <a class="f_blue">上移</a>
+                        <a class="f_blue">下移</a>
+                        <a class="f_red">移除</a>
+                    </div>
+                </li>
+                <li>
+                    状态
+                    <div class="floatright function">
+                        <a class="f_blue">上移</a>
+                        <a class="f_blue">下移</a>
+                        <a class="f_red">移除</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+    <button class="btn_blue" ng-click="ok()">存为模板</button>
+    <button class="btn_gray" ng-click="cancel()">确认</button>
+</div>

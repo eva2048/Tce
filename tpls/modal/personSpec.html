@@ -1,0 +1,31 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>购买服务</h3>
+</div>
+<div class="modal-body modalBody">
+    <ul class="titleUl">   
+    	<li class="bug_num">
+    		<h1>购买成员规格：</h1>
+    		<select ng-change="change(personState)" ng-model="personState" ng-init="personState='0'" class="inputText" >
+    			<option value="0">0-10</option>
+    			<option value="1">0-30</option>
+    			<option value="2">0-50</option>
+    			<option value="3">50+</option>
+    		</select>
+    	</li>	
+      <li class="zfb">
+        <h1>付款方式：</h1>
+        <img src="images/icon_zfb.png"/>
+      </li>
+    </ul>	
+    <br />
+    <br />
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+    <div class="addpay">
+        合计：<span ng-bind="as" ng-init="0"> </span> 元  
+        <button class="btn_red marginl_20" ng-click="ok()">提交订单</button>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>添加\编辑模块属性</h3>
+</div>
+<div class="modal-body modalBody">
+    <ul class="titleUl">
+        <li>
+            <h1>属性名称：</h1>
+            <input type="text" class="inputText">
+            <span class="error">邀请码格式错误</span>
+        </li>
+        <div class="clear"></div>
+        <li class="floatleft">
+            <h1>所属模块：</h1>
+            <select class="selectNormal">
+                <option>项目经理</option>
+                <option>测试</option>
+                <option>开发</option>
+            </select>
+        </li>
+        <li>
+            <h1>显示类型：</h1>
+            <select class="selectNormal">
+                <option>项目经理</option>
+                <option>测试</option>
+                <option>开发</option>
+            </select>
+        </li>
+        <div class="clear"></div>
+        <li class="floatleft">
+            <h1>是否显示：</h1>
+            <select class="selectNormal">
+                <option>项目经理</option>
+                <option>测试</option>
+                <option>开发</option>
+            </select>
+        </li>
+        <li>
+            <h1>是否必填：</h1>
+            <select class="selectNormal">
+                <option>项目经理</option>
+                <option>测试</option>
+                <option>开发</option>
+            </select>
+        </li>
+
+        <li>
+            <h1>默认值：</h1>
+            <input type="text" class="inputText">
+            <span class="error">邀请码格式错误</span>
+        </li>
+        <li>
+            <h1>选项值：</h1>
+            <input type="text" class="inputText" value="高；中；低">
+            <span class="error">邀请码格式错误</span>
+        </li>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn_blue" ng-click="ok()">确认</button>
+    <button class="btn_gray" ng-click="cancel()">取消</button>
+</div>

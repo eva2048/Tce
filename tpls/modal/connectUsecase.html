@@ -1,0 +1,43 @@
+<style type="text/css">
+
+
+</style>
+<div class="modal-header">
+    <h3 class="floatleft">关联用例</h3>
+    <img src="images/modal_close.png" ng-click="cancel()" style="float: right;width: 14px;margin-top: 2px;cursor: pointer">
+</div>
+<div class="modal-body modalBody">
+    <div class="tableListBox">
+        <div class="listTitle">已选用例：<span class="f_blue">用例1</span></div>
+        <div class="listBody">
+            <div>
+                <script type="text/ng-template" id="nodes_renderer.html">
+                    <div class="tree-node tree-node-content treeLine">
+                        <a class="treeToggle" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)"><img ng-src="{{collapsed?'images/treeBody_close.png':'images/treeBody_open.png'}}"></a>
+                        <span ng-show="!this.isEdit" class="treeText">
+                            {{node.title | limitTo:10}}{{node.title.length>5?'...':''}}
+                        </span>
+                    </div>
+                    <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+                        <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
+                        </li>
+                    </ol>
+                </script>
+                <div>
+                    <div class="col-sm-12">
+                        <div ui-tree="treeOptions" id="tree-root">
+                            <ol ui-tree-nodes ng-model="data">
+                                <li ng-repeat="node in data" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+    <button class="btn_blue" ng-click="ok()">确认</button>
+    <button class="btn_gray" ng-click="cancel()">取消</button>
+</div>

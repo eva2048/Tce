@@ -1,0 +1,16 @@
+<div class="helpCenterLeft">
+	<ul>
+		<li class="{{helpCenterNavNow1==1?'ho':''}}" ng-click="helpCenterNavNow1=1">
+			<a ui-sref="helpCenter.productsExp({hnum:2,hnum2:1,hnum3:0})">产品说明</a>
+		</li>
+		<li class="{{helpCenterNavNow1==2?'ho':''}}" ng-click="helpCenterNavNow1=2" style="border-bottom:1px solid #d4dbe0 ;">
+			<a  ng-click="toggle()">功能详解</a>			
+		</li>
+		<ol ng-show="navshow">
+			<li class="{{helpCenterNavNow2==1?'ho':''}}" ng-click="helpCenterNavNow2=1"><a ui-sref="helpCenter.productsExp.gnxj({hnum1:2,hnum2:3,hnum3:1})">• 角色管理</a></li>
+			<li class="{{helpCenterNavNow2==2?'ho':''}}" ng-click="helpCenterNavNow2=2"><a ui-sref="helpCenter.productsExp.qxlcdz({hnum1:2,hnum2:4,hnum3:2})">• 缺陷流程定制</a></li>
+			<li class="{{helpCenterNavNow2==3?'ho':''}}" ng-click="helpCenterNavNow2=3"><a ui-sref="helpCenter.productsExp.zdymk({hnum1:2,hnum2:5,hnum3:3})">• 自定义模块属性</a></li>
+			<li class="{{helpCenterNavNow2==4?'ho':''}}" ng-click="helpCenterNavNow2=4"><a ui-sref="helpCenter.productsExp.drdc({hnum1:2,hnum2:6,hnum3:4})">• 导入导出</a></li>		
+		</ol>
+	</ul>
+</div>

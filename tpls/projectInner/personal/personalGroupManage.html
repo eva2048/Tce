@@ -1,0 +1,45 @@
+<div class="projectBodyBox" ng-controller="personalGroupManagerCtrl">
+    <div class="projectBodyTitle">
+        团队管理
+    </div>
+    <div class="projectBodyFunction">
+        <input class="floatleft fbtn fbtn_red" type="button" value="批量删除">
+        <div class="floatleft" ng-controller="addMemberModalCtrl">
+        	<input class="floatleft fbtn fbtn_blue" type="button" ng-click="open()" value="添加人员">
+        </div>
+        <div class="searchBox floatright">
+            <input class="floatleft inputSearch" type="text" placeholder="请输入缺陷名称或ID" name="">
+            <img class="btnSearch" src="images/searchBox_btnSearch.png">
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="projectBodyList">
+        <table class="table-fullborder">
+            <tr>
+                <th>
+                    <input type="checkbox" name="">
+                </th>
+                <th>昵称</th>
+                <th>账号</th>
+                <th>角色</th>
+                <th>加入时间</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="">
+                </td>
+                <td><img class="floatleft" style="margin-top:15px;margin-right:8px;" src="images/userCaseListTable_file.png"><span class="text_ellipsis10 f_blue cursor_p">test08</span></td>
+                <td>测试用例1</td>
+                <td>humq</td>
+                <td>2016-12-2 19：00</td>
+                <td ng-controller="editRoleModalCtrl"><a ng-click="open()" class="f_blue">修改角色</a><a class="f_red">删除</a></td>
+            </tr>
+        </table>
+        <div class="floatright">
+            <pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm embed-responsive-item" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" max-size="maxSize" rotate="false">
+            </pagination>
+        </div> 
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div>
+    <div ui-view="topbar" style="position: fixed;width:100%; height: 60px;z-index: 200"></div>
+    <div style="padding-top: 60px;">
+        <div class="content">
+            <div class="order_top fix">
+                <p class="p1">我的订单</p>
+            </div>
+            <div class="projectBodyFunction">
+                <select class="projectSelect floatleft">
+                    <option>所有状态</option>
+                    <option>进行中</option>
+                    <option>结项中</option>
+                    <option>已结项</option>
+                </select>
+                <div class="searchBox floatright">
+                    <input class="floatleft inputSearch" type="text" placeholder="请输入订单号或订单内容" name="">
+                    <img class="btnSearch" src="images/searchBox_btnSearch.png">
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="order_details">
+                <table>
+                    <tr>
+                        <th>订单号</th>
+                        <th>订单内容</th>
+                        <th>订单金额</th>
+                        <th>订单时间
+                        </th>
+                        <th>订单状态</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td>1100211561656</td>
+                        <td>企业基础版<span class="orange">1680元*1</span>企业基础版企业基础版企业基础版</td>
+                        <td>1680.00</td>
+                        <td>2017-02-20 14:33</td>
+                        <td> <span class="yzf">已支付</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1100211561656</td>
+                        <td>企业基础版<span class="orange">1680元*1</span></td>
+                        <td>1680.00</td>
+                        <td>2017-02-20 14:33</td>
+                        <td> <span class="dzf"> 待支付</span></td>
+                        <td><a class="f_blue">去支付</a> <a class="f_red">取消订单</a></td>
+                    </tr>
+                </table>
+                <div class="floatright">
+                    <pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm embed-responsive-item" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" max-size="maxSize" rotate="false">
+                    </pagination>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

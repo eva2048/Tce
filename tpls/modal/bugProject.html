@@ -1,0 +1,27 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>购买服务</h3>
+</div>
+<div class="modal-body modalBody">
+    <ul class="titleUl">   
+    	<li class="bug_num">
+    		<h1>购买项目数：{{datas.num}}</h1>
+    		<input type="button" class="button" value="-" ng-click="decrease()">
+    		<span>{{num}}</span>
+    		<input type="button" class="button" value="+" ng-click="increase()">  	
+        <div class="clear"></div>	
+    	</li>	
+      <li class="zfb">
+        <h1>付款方式：</h1>
+        <img src="images/icon_zfb.png"/>
+      </li>
+    </ul>	
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+    <div class="addpay">
+        合计：<span >{{all}} </span> 元  
+        <button class="btn_red marginl_20" ng-click="ok()">提交订单</button>
+    </div>
+</div>

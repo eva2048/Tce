@@ -1,0 +1,65 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>测试用例附件管理</h3>
+</div>
+<div class="modal-body modalBody">
+    <ul class="titleUl">
+        <li>
+            <h1 style="width: auto">描述：</h1>
+            <input type="text" class="inputText">
+            <span class="error">不能为空</span>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <input type="button" class="fbtn_red" name="" value="批量删除">
+            <input type="button" class="fbtn_blue" name="" value="添加附件">
+        </li>
+        <div class="tableListBox">
+            <div class="listBody" style="padding: 0px;">
+                <table class="table-fullborder">
+                    <tr>
+                        <th>
+                            <input type="checkbox" name="">
+                        </th>
+                        <th>附件名称</th>
+                        <th>附件大小</th>
+                        <th>附件类型</th>
+                        <th>上传日期</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td><span class="f_blue">test08</span></td>
+                        <td>13M</td>
+                        <td>jpg</td>
+                        <td>2017-1-1 19:00:00</td>
+                        <td>
+                            <a class="f_blue cursor_p">下载</a>
+                            <a class="f_red cursor_p">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="">
+                        </td>
+                        <td><span class="f_blue">test08</span></td>
+                        <td>13M</td>
+                        <td>jpg</td>
+                        <td>2017-1-1 19:00:00</td>
+                        <td>
+                            <a class="f_blue cursor_p">下载</a>
+                            <a class="f_red cursor_p">删除</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn_blue" ng-click="ok()">确认</button>
+    <button class="btn_gray" ng-click="cancel()">取消</button>
+</div>

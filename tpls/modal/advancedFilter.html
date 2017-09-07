@@ -1,0 +1,55 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>高级筛选</h3>
+</div>
+<div class="modal-body modalBody">
+    <div class="tableListBox floatleft" style="width:28%">
+        <div class="listTitle">过滤器模板</div>
+        <div class="listBody">
+            <ul class="selectUl">
+                <li>ID</li>
+                <li>缺陷名称</li>
+                <li>缺陷等级</li>
+                <li>状态</li>
+                <li>ID</li>
+                <li>缺陷名称</li>
+                <li>缺陷等级</li>
+                <li>状态</li>
+                <li>ID</li>
+                <li>缺陷名称</li>
+                <li>缺陷等级</li>
+                <li>状态</li>
+            </ul>
+        </div>
+    </div>
+    <div class="tableListBox floatright" style="width:70%">
+        <div class="listTitle">过滤器名称：
+            <input class="inputText" style="width:240px" name="">
+            <span class="error">过滤器名不能为空</span>
+        </div>
+        <div class="listBody" style="padding: 0px;">
+            <table class="table-fullborder2" style="width:100%; margin-left: -1px;">
+                <tr>
+                    <th style="width:40px;">
+                        <input type="checkbox" name="">
+                    </th>
+                    <th>筛选字段</th>
+                    <th>筛选条件</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="">
+                    </td>
+                    <td>项目模块</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+    <button class="btn_blue" ng-click="ok()">存为模板</button>
+    <button class="btn_gray" ng-click="cancel()">确认</button>
+</div>

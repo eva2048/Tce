@@ -1,0 +1,26 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>购买服务</h3>
+</div>
+<div class="modal-body modalBody">
+    <ul class="titleUl">   
+    	<li class="deblock">
+    		<h1>解锁功能：</h1>   
+    		<span>{{data.lock}}</span>
+    	</li>
+      <li class="zfb">
+        <h1>付款方式：</h1>
+        <img src="images/icon_zfb.png"/>
+      </li>	
+    </ul>	
+    <br />
+    <div class="clear"></div>
+</div>
+<div class="modal-footer">
+    <div class="addpay">
+        合计：<span>{{data.pay}} </span> 元
+        <button class="btn_red marginl_20" ng-click="ok()">提交订单</button>
+    </div>
+</div>
+

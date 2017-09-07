@@ -1,0 +1,54 @@
+<style type="text/css">
+</style>
+<div class="modal-header">
+    <h3>导入已有项目成员</h3>
+</div>
+<div class="modal-body modalBody">
+    <div class="tableListBox">
+        <div class="listTitle">选择项目：
+            <select class="selectNormal" style="width:300px;">
+                <option>项目一</option>
+                <option>项目二</option>
+                <option>项目三</option>
+            </select>
+            <span class="error">过滤器名不能为空</span>
+        </div>
+        <div class="listBody" style="padding: 0px;">
+            <table class="table-fullborder2" style="width:100%; margin-left: -1px;">
+                <tr>
+                    <th style="width:40px;">
+                        <input type="checkbox" name="">
+                    </th>
+                    <th>昵称</th>
+                    <th>账号</th>
+                    <th>角色</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="">
+                    </td>
+                    <td><span class="f_blue">test01</span></td>
+                    <td>739428090@qq.com</td>
+                    <td>
+                    	<div class="dropdownBox" dropdown>
+                        <div dropdown-toggle class="tableDropdownToggle">
+                            状态
+                            <img src="images/dropdownBox_icon.png">
+                        </div>
+                        <ul class="dropdown-menu tableDropdownMenu" dropdown-menu role="menu">
+                            <li><a><input class="checkbox" ng-click="$event.stopPropagation();" type="checkbox">缺陷导出</a></li>
+                            <li><a><input class="checkbox" ng-click="$event.stopPropagation();" type="checkbox">高级筛选</a></li>
+                            <li><a><input class="checkbox" ng-click="$event.stopPropagation();" type="checkbox">自定义列</a></li>
+                        </ul>
+                    </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn_blue" ng-click="ok()">添加</button>
+    <button class="btn_gray" ng-click="cancel()">取消</button>
+</div>
+

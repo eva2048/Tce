@@ -1,0 +1,449 @@
+.content {
+	width: 1200px;
+	margin: 0 auto;
+}
+/*我的订单部分css*/
+.order_top {
+	
+	border-bottom: 1px solid #e1e6eb;
+	margin: 50px 30px 0;
+	padding-bottom: 20px;
+}
+
+.p1 {
+	float: left;
+	font-size: 20px;
+	color: #1B1B1B;
+}
+.order_details{
+	margin: 0px 30px 10px;
+}
+.order_details table{
+	width: 100%;
+	font-size: 14px;
+	border-collapse: collapse;
+}
+.order_details tr{
+	height: 53px;
+	line-height: 53px;
+	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;	
+}
+.order_details th{
+	color: #000000;
+}
+.order_details td,.order_details th{
+	padding: 0 25px;
+	max-width: 270px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.orange{
+	color: #ff9000;
+}
+.yzf{
+	padding-left: 20px;
+	background: url(../images/icon_jingxz.png) no-repeat left center;
+}
+.dzf{
+	padding-left: 20px;
+	background: url(../images/icon_jiexz.png) no-repeat left center;
+}
+.order_details table a{
+	border: none;
+}
+
+/*账号升级部分css*/
+.banner{
+	width: 100%;
+	min-width: 1200px;
+	height: 300px;
+	background: url(../images/upgrade_bannerbg.png) no-repeat center center;
+}
+.banner h3{
+	font-size: 48px;
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 100px;
+}
+.banner h5{
+	font-size: 22px;
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 20px;
+}
+.version{
+	margin-top: 50px;
+}
+.version .title li{
+	font-size: 16px;
+	color: #7c8ea7;
+	text-align: center;
+	float: left;
+	width: 198px;
+	height: 65px;
+	line-height: 65px;
+	border: 1px solid #d4dbe0;
+	border-bottom-color: #F2F2F2;
+}
+.version .title li:first-child{
+	width: 408px;
+	border-top: 4px solid #a3b7d2;	
+}
+.version .title li:nth-child(2){
+	border-top: 4px solid #54c5f9;
+	border-left: none;
+}
+.version .title li:nth-child(3){
+	border-top: 4px solid #48d5b2;
+	border-left: none;
+}
+.version .title li:nth-child(4){
+	border-top: 4px solid #ffc36d;
+	border-left: none;
+}
+.version .title li:last-child{
+	border-top: 4px solid #ff7e7e;
+	border-left: none;
+}
+.version .version_c li{	
+	text-align: center;
+	float: left;
+	width: 198px;	
+	height: 138px;
+	border: 1px solid #d4dbe0;
+	border-top: none;
+	position: relative;
+	display: table;
+}
+.version .version_c li p{
+	display: table-cell;
+	vertical-align: middle;
+}
+.version .version_c li:first-child{
+	width: 408px;
+}
+.version .version_c li:first-child p{
+	font-size: 14px;
+	color: #878787;
+	line-height: 24px;
+}
+.version .version_c li:first-child p span{
+	margin-left: 40px;
+}
+.version .version_c li:nth-child(2){
+	border-left: none;
+	font-size: 24px;
+	color: #54c5f9;
+}
+.version .version_c li:nth-child(2) p{
+}
+.version .version_c li:nth-child(3){
+	border-left: none;
+	font-size: 18px;
+	color: #a4b0c2;
+}
+.version .version_c li:nth-child(3) p{
+}
+.version .version_c li:nth-child(3) p .green{
+	color: #48d5b2;
+	font-size: 24px;
+}
+.version .version_c li:nth-child(4){
+	border-left: none;
+	font-size: 18px;
+	color: #a4b0c2;
+}
+.version .version_c li:nth-child(4) p .green{
+	font-size: 24px;
+	color: #ffc36d;
+}
+.version .version_c li:nth-child(4) p{
+}
+.version .version_c li:nth-child(4) p img{
+	margin-top: -4px;
+}
+.version .version_c li:last-child{
+	border-left: none;
+	font-size: 18px;
+	color: #ff7e7e;
+}
+.version .version_c li:last-child p{
+	padding-top: 32px;
+}
+.version .version_c li:last-child p img{
+	margin-top: -4px;
+}
+.version .version_c li a{
+	cursor: pointer;
+	display: block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	background: #7cb0ff;
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -60px;
+}
+.version .version_c li a:hover{
+	background: #56c6ff;
+}
+.version .version_b{
+	text-align: center;
+	border: 1px solid #d4dbe0;
+	border-bottom: none;
+	border-top: none;
+	width: 100%;
+	height: 57px;
+	line-height: 57px;
+	background: url(../images/upgrade_bg2.png) no-repeat center center;
+	font-size: 18px;
+	color: #212121;	
+}
+.version .version_a{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 100%;
+	height: 870px;
+	border: 1px solid #d4dbe0;
+	border-top:none ;
+	margin-bottom: 50px;
+}
+.version .version_a .free{
+	float: left;
+	width: 410px;
+	height: 760px;
+	border: 1px solid #E5E5E5;
+	box-shadow: 0 0 5px #ddd;
+	margin-left: 147px;
+}
+.version .version_a .free .title{
+	text-align: center;	
+	width: 100%;
+	height: 120px;
+	background: #f6f9fa;
+}
+.version .version_a .free .title h4{
+	font-size: 24px;
+	color: #212121;
+	padding-top: 30px;
+}
+.version .version_a .free .title p{
+	font-size: 15px;
+	color: #bababa;
+	margin-top: 15px;
+}
+.version .version_a .price{
+	margin-top: 20px;
+	font-size: 33px;
+	color: #545454;
+	text-align: center;
+	height: 205px;
+	border-bottom: 1px solid #E5E5E5;
+}
+.version .version_a .price span{
+	font-size: 22px;
+	color: #878787;
+};
+.version .version_a .price sup{
+	font-size: 33px;
+}
+.version .version_a .price a{
+	display: block;
+	width: 145px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #37bbfe;
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	color: #37bbfe;
+	margin:20px auto;
+	border-radius:5px ;
+}
+.version .version_a .explain{
+	margin-top: 40px;
+}
+.version .version_a .explain ul li{
+	font-size:16px ;
+	color: #545454;
+	list-style-type:disc;
+	list-style-position:inside;
+	margin-left: 65px;
+	margin-bottom: 15px;
+}
+.version .version_a .enterprise{
+	float: right;
+	width: 410px;
+	height: 760px;
+	border: 1px solid #68c5f7;
+	box-shadow: 0 0 5px #75d2f9;
+	margin-right: 147px;
+}
+.version .version_a .enterprise .title{
+	text-align: center;	
+	width: 100%;
+	height: 120px;
+	color: #FFFFFF;
+	background: url(../images/upgrade_bg3.png) no-repeat center center;
+}
+.version .version_a .enterprise .title h4{
+	font-size: 24px;
+	padding-top: 30px;
+}
+.version .version_a .enterprise .title p{
+	font-size: 15px;
+	margin-top: 15px;
+}
+.version .version_a .enterprise a{
+	background: #56c6ff;
+	color: #FFFFFF;
+}
+.role{
+	width: 100%;
+	height: 895px;
+	background: #f7f7f7;
+	text-align: center;
+}
+.role h3{
+	padding-top: 65px;
+	font-size: 36px;
+	color: #3b3b3b;
+}
+.role p{
+	font-size: 18px;
+	color: #6E6E6E;
+	line-height: 32px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+.defect_treatment{
+	width: 100%;
+	height: 895px;
+	background: #fff;
+	text-align: center;
+}
+.defect_treatment h3{
+	padding-top: 65px;
+	font-size: 36px;
+	color: #3b3b3b;
+}
+.defect_treatment p{
+	font-size: 18px;
+	color: #6E6E6E;
+	line-height: 32px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+.custom{
+	width: 100%;
+	height: 895px;
+	background: #f7f7f7;
+	text-align: center;
+}
+.custom h3{
+	padding-top: 65px;
+	font-size: 36px;
+	color: #3b3b3b;
+}
+.custom p{
+	font-size: 18px;
+	color: #6E6E6E;
+	line-height: 32px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+.help_tips{
+	width: 100%;
+	height: 250px;
+	background: #FFFFFF;
+	text-align: center;
+}
+.help_tips h3{
+	font-size: 34px;
+	color: #212121;
+	padding-top: 65px;
+}
+.help_tips p{
+	margin-top: 25px;
+	font-size: 24px;
+	color: #545454;
+}
+
+/*账号升级改版*/
+.version_a1 {
+    width: 100%;
+    border-left: 1px solid #d4dbe0;
+    margin-bottom: 50px;
+}
+.versionTable{
+	width: 100%;
+	color: #526069;
+	font-size: 14px;
+	background: #fff;
+
+}
+.versionTable tr th{
+	border-bottom: 1px solid #e6ebed;
+	border-right: 1px solid #e6ebed;
+	padding: 20px;
+	font-size: 18px;
+	color: #7c8ea7;
+	text-align: center;
+}
+.versionTable tr th span{
+	font-size: 14px;
+	margin-top: 10px;
+}
+.versionTable tr th em{
+	font-size: 24px;
+	margin-right: 5px;
+}
+.versionTable .c-blue {
+	color:#54c5f9;
+}
+.versionTable .c-green{
+	color:#48d5b2
+}
+.versionTable .c-yellow{
+	color:#ffc36d
+}
+.versionTable .c-red{
+	color:#ff7e7e
+}
+.versionTable tr td{
+	border-bottom: 1px solid #e6ebed;
+	border-right: 1px solid #e6ebed;
+	padding: 20px;
+	font-size: 16px;
+	color: #7c8ea7;
+	position: relative;
+	text-align: center;
+}
+.versionTable tr td .btn-blue{
+	cursor: pointer;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #7cb0ff;
+    border-radius: 4px;
+    position: absolute;
+    top:11px;
+    left: 50%;
+    margin-left: -60px;
+    padding: 0px;
+}
+.versionTable tr td .btn-blue:hover{
+	background: #56c6ff;
+}

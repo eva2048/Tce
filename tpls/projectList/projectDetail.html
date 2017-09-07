@@ -1,0 +1,93 @@
+<style type="text/css">
+</style>
+<div class="projectDetailBox" ng-controller="projectDetailCtrl">
+    <h1 class="detailTitle">项目详情</h1>
+    <div class="bugName">
+        <span class="bugId">众测</span> 项目名称
+    </div>
+    <div class="bugChangeBox">
+        <ul>
+            <li>
+                <span>项目状态：</span>
+                <em>humq</em>
+            </li>
+            <li>
+                <span>创建人：</span>
+                <em>humq</em>
+            </li>
+            <li>
+                <span>起止时间：</span>
+                <em>2017-03-27~2017-04-15</em>
+            </li>
+            <li>
+                <span>加入时间：</span>
+                <em>2017-03-27</em>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <div class="bugDetailBox">
+        <div class="attribute" style="padding: 25px">
+            <div>
+                <div class="attributeTitle">
+                    项目描述
+                </div>
+                <p class="attributeP">从1962年诞生的第一台虚拟现实设备Sensorama开始算，虚拟现实已经走过了54个年头。随着2016年初阿里巴巴近8亿美元投资Magic Leap，中国的“VR创业潮”正式拉开了帷幕，2016年也被称为中国虚拟现实的元年，这期间涌现了大量的创业公司，其中不乏佼佼者，逐渐走上了引领世界VR发展的道路。</p>
+            </div>
+            <div>
+                <div class="attributeTitle">
+                    项目模块
+                </div>
+                <p class="attributeP">从1962年诞生的第一台虚拟现实设备Sensorama开始算，虚拟现实已经走过了54个年头。随着2016年初阿里巴巴近8亿美元投资Magic Leap，中国的“VR创业潮”正式拉开了帷幕，2016年也被称为中国虚拟现实的元年，这期间涌现了大量的创业公司，其中不乏佼佼者，逐渐走上了引领世界VR发展的道路。</p>
+            </div>
+            <div>
+                <div class="attributeTitle">
+                    项目文档
+                </div>
+                <ul class="attributeFile">
+                    <li>
+                        <img src="images/file_word.png">
+                        <span>测试需求文档.doc</span>
+                        <em class="f_blue2">下载</em>
+                    </li>
+                    <li>
+                        <img src="images/file_pic.png">
+                        <span>图片1.png</span>
+                        <em class="f_blue2">下载</em>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="attributeTitle">
+                    缺陷流程
+                </div>
+                <ul class="attributeFile">
+                    <li ng-init="isShowDefectProcess=false">
+                        <span>默认流程</span>
+                        <em class="f_blue2" ng-click="isShowDefectProcess=!isShowDefectProcess">查看流程</em>
+                        <table class="table-fullborder margint_20" ng-show="isShowDefectProcess">
+                            <tr>
+                                <th>起始状态</th>
+                                <th>角色</th>
+                                <th>目标状态</th>
+                                <th>默认开始</th>
+                            </tr>
+                            <tr>
+                                <td><span class="f_blue">新建</span></td>
+                                <td>测试工程师；测试负责人；开发工程师；开发负责人；技术负责人</td>
+                                <td><span class="f_blue">新建</span></td>
+                                <td class="f_red">默认开始</td>
+                            </tr>
+                            <tr>
+                                <td><span class="f_blue">确认</span></td>
+                                <td>测试工程师；测试负责人；开发工程师；开发负责人；技术负责人</td>
+                                <td><span class="f_blue">分配</span></td>
+                                <td class="f_red">默认开始</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

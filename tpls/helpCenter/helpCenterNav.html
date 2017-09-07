@@ -1,0 +1,24 @@
+<style type="text/css">
+
+</style>
+<div class="helpCenterNav">
+    <ul>
+        <li ui-sref="helpCenter({hnum1:1,hnum2:1})" class="{{helpCenterNavNow==1?'active':''}}" ng-click="helpCenterNavNow=1">
+            <a>快速使用</a>
+        </li>
+        <li ui-sref="helpCenter.productsExp({hnum1:2,hnum2:1,hnum3:0})" class="{{helpCenterNavNow==2?'active':''}}" ng-click="helpCenterNavNow=2">
+            <a>产品说明</a>
+        </li>
+        <li ui-sref="helpCenter.explanation({hnum1:3,hnum2:1})" class="{{helpCenterNavNow==3?'active':''}}" ng-click="helpCenterNavNow=3">
+            <a>名词解释</a>
+        </li>
+        <li ui-sref="helpCenter.FAQ({hnum1:4,hnum2:1})" class="{{helpCenterNavNow==4?'active':''}}" ng-click="helpCenterNavNow=4">
+            <a >常见问题</a>
+        </li>
+        <li ui-sref="helpCenter.updateLog({hnum1:5,hnum2:1})" class="{{helpCenterNavNow==5?'active':''}}" ng-click="helpCenterNavNow=5">
+            <a>更新日志</a>
+        </li>       
+        <div class="clear"></div>
+    </ul>
+</div>
+

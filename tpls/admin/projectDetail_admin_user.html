@@ -1,0 +1,99 @@
+<style type="text/css">
+</style>
+<div class="projectDetailBox" ng-controller="userDetailAdminCtrl">
+    <h1 class="detailTitle">用户详情</h1>
+    <div class="bugName">
+        <span class="bugId">用户昵称</span> 739428090@qq.com
+    </div>
+    <div class="bugChangeBox">
+        <ul>
+            <li>
+                <span>可建项目：</span>
+                <input style="width: 180px;" type="text" class="inputText" name="" value="5">
+            </li>
+            <li>
+                <span>项目成员规格：</span>
+                <select class="selectNormal">
+                    <option>0-10</option>
+                    <option>11-20</option>
+                </select>
+            </li>
+            <li>
+                <span>账号类型：</span>
+                <select class="selectNormal">
+                    <option>免费版</option>
+                    <option>企业版</option>
+                </select>
+            </li>
+            <li class="multiSelectBox">
+                <span class="floatleft">权限配置：</span>
+                <div class="multiSelect floatleft">
+                    <input type="checkbox"><h6>角色管理</h6>
+                    <input type="checkbox"><h6>缺陷流程定制</h6>
+                    <input type="checkbox"><h6>自定义模块属性</h6>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+                <input class="btn_blue" type="button" value="提交">
+            </li>   
+            <div class="clear"></div>         
+        </ul>
+    </div>
+    <div class="bugDetailBox">
+        <div class="tab">
+            <span ng-class="{current:isAttribute}" ng-click="isAttribute=true">项目列表</span>
+            <span ng-class="{current:!isAttribute}" ng-click="isAttribute=false">缺陷流程</span>
+        </div>
+        <div class="process" ng-hide="isAttribute" ng-controller="editRelateDefectProcessModalCtrl">
+            <input ng-click="open()" type="button" name="" class="fbtn_blue" value="添加关联流程">
+            <ul>
+                <li>
+                    <div class="f_blue"><img src="images/zhankai.png">默认流程</div>
+                    <table class="table-fullborder">
+                        <tr>
+                            <th>起始状态</th>
+                            <th>角色</th>
+                            <th>目标状态</th>
+                            <th>默认开始</th>
+                        </tr>
+                        <tr>
+                            <td><span class="f_blue">新建</span></td>
+                            <td>测试工程师；测试负责人；开发工程师；开发负责人；技术负责人</td>
+                            <td><span class="f_blue">新建</span></td>
+                            <td class="f_red">默认开始</td>
+                        </tr>
+                        <tr>
+                            <td><span class="f_blue">确认</span></td>
+                            <td>测试工程师；测试负责人；开发工程师；开发负责人；技术负责人</td>
+                            <td><span class="f_blue">分配</span></td>
+                            <td class="f_red">默认开始</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <div class="history" ng-show="isAttribute">
+            <table class="table-fullborder">
+                <tr>
+                    <th></th>
+                    <th>项目名称</th>
+                    <th>项目状态</th>
+                    <th>成员个数</th>
+                    <th>缺陷个数</th>
+                    <th>创建人</th>
+                    <th>创建时间</th>
+                </tr>
+                <tr>
+                    <td><img src="images/projectBodyList_tc.png"></td>
+                    <td>项目名称</td>
+                    <td><img src="images/icon_jingxz.png">进行中</td>
+                    <td>10</td>
+                    <td>30</td>
+                    <td>humq</td>
+                    <td>2016-03-04 19:00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
